@@ -8,9 +8,9 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta name="keywords" content="Computer System,Phones,Tech training,upskilling,employed,Nigerian,Service Provider,Information Technology,Training,Service Management,Data Analysis,Data Visualization,Andriod service provider" />
+  <meta name="description" content="We offer customized and Hands-on training needs in IT specific to girls, women, the unemployed, those requiring upskilling, startups,organizations / groups / societies. We provide quality service management to individuals and corporate organizations." />
+  <meta name="author" content="Jumoke Raji" />
 
   <title>My TechSpace</title>
 
@@ -35,13 +35,13 @@
       <div class="header_top">
         <div class="container-fluid">
           <div class="contact_nav">
-            <a href="">
+            <a href="tel:+2348159411750">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
                 Call : +234 8159411750
               </span>
             </a>
-            <a href="">
+            <a href="mailto:jrtutor11@gmail.com">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
                 Email : jrtutor11@gmail.com
@@ -54,7 +54,7 @@
           <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
-              <span><img src="images/logo.png" alt="">
+              <span><img src="images/logo.png" alt="My TechSpace">
                 MyTechSpace
               </span>
             </a>
@@ -421,27 +421,57 @@
           Contact Us
         </h2>
       </div>
-      <div class="row">
+     <div class="row">
         <div class="col-md-6">
-          <form action="">
+          <form action="action_page.php" method="POST" action="<?php echo $_SERVER ['PHP_SELF'];?>">
             <div>
-              <input type="text" placeholder="Name" />
+              <input type="text" name="Name" placeholder="Name" />
             </div>
             <div>
-              <input type="text" placeholder="Phone Number" />
+              <input type="tel" name="Phone Number" placeholder="Phone Number" />
             </div>
             <div>
-              <input type="email" placeholder="Email" />
+              <input type="email" name="email" placeholder="Email" />
             </div>
             <div>
-              <input type="text" class="message-box" placeholder="Message" />
+              <input type="text" class="message-box" name="message-box" placeholder="Message" />
             </div>
             <div class="d-flex ">
-              <button>
+              <button><input type="submit" value="SEND">
                 SEND
               </button>
             </div>
           </form>
+          <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_REQUEST['Name'];
+  if (empty($name)) {
+    echo "Name is required";
+  } else {
+    echo $name;
+  }
+  $name = $_REQUEST['Phone Number'];
+  if (empty($name)) {
+    echo "Phone Number is required";
+  } else {
+    echo $name;
+  }
+  $name = $_REQUEST['Email'];
+  if (empty($name)) {
+    echo "Email is required";
+  } else {
+    echo $name;
+  }if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_REQUEST['Message Box'];
+  if (empty($name)) {
+    echo "Your message is required";
+  } else {
+    echo $name;
+  }
+}
+?>
         </div>
         <div class="col-md-6">
           <div class="map_container">
@@ -486,7 +516,8 @@
                       <i class="fa fa-phone" aria-hidden="true"></i>
                     </div>
                     <p>
-                      +234 8159411750
+                     <a href="tel:+2348159411750">
+                      +234 8159411750 </a>
                     </p>
                   </div>
                 </a>
@@ -498,7 +529,8 @@
                       <i class="fa fa-envelope" aria-hidden="true"></i>
                     </div>
                     <p>
-                      jrtutor11@gmail.com
+                      <a href="mailto:jrtutor11@gmail.com">
+                      jrtutor11@gmail.com </a>
                     </p>
                   </div>
                 </a>
@@ -512,18 +544,24 @@
       <h4>
         Follow Us
       </h4>
-      <div class="box">
-        <a href="">
+     <div class="box">
+        <a href="https://www.facebook.com/MyTechSpace1">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
-        <a href="">
+        <a href="https://x.com/jumokeraji6?s=09">
           <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
-        <a href="">
+        <a href="https://www.youtube.com/@mtechspace">
           <i class="fa fa-youtube" aria-hidden="true"></i>
         </a>
-        <a href="">
+        <a href="https://www.instagram.com/deejumi">
           <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://wa.me/message/VLBQX4Y33RQLO1">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a href="https://t.me/+2348179366495">
+          <i class="fa fa-Telegram" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -538,7 +576,7 @@
     <div class="container">
       <p>
         &copy; <span id="displayDateYear"></span> All Rights Reserved By
-        <a href="https://github.com/J-raji/">JR</a>
+        <a href="https://github.com/mtechspace/">JR</a>
       </p>
     </div>
   </footer>
@@ -550,7 +588,17 @@
   </script>
   <script src="js/custom.js"></script>
   <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <script>
+  function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
   <!-- End Google Map -->
 
 
