@@ -22,9 +22,10 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <!-- Map Style for this site -->
+  <link rel="css/stylesheet" type="application/json" href="css/style.css.map" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="css/stylesheet" type="stylesheet" href="css/responsive.css" />
 
 </head>
 
@@ -215,16 +216,6 @@
   </script>
   <script src="js/custom.js"></script>
   <!-- Google Map -->
-  <script>
- function myMap() {
-var mapProp= {
-  center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-</script>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
   <!-- End Google Map -->
 
