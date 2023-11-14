@@ -662,7 +662,7 @@ a:focus {
   padding-left: 25px;
   background-color: #000000;
   outline: none;
-  color: #000000;
+  color: #ffffff;
   -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
 }
@@ -696,7 +696,7 @@ a:focus {
   background-color: #0355cc;
   border: 1px solid #0355cc;
   border-radius: 0;
-  color: #000000;
+  color: #ffffff;
   margin-top: 15px;
 }
 
